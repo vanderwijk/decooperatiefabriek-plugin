@@ -1,0 +1,1 @@
+# decooperatiefabriek-plugin
