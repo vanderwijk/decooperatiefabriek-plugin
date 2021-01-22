@@ -50,7 +50,7 @@ function create_courses() {
     'hierarchical' => true,
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt'),
     'rewrite' => array('slug' => 'programma'),
-    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek/images/courses.png'
+    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek-plugin/images/courses.png'
   ); 
   register_post_type('courses',$args);
 }
@@ -146,7 +146,7 @@ function create_team() {
     'hierarchical' => false,
     'supports' => array( 'title', 'editor', 'thumbnail'),
     'rewrite' => array('slug' => 'teamlid'),
-    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek/images/team.png'
+    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek-plugin/images/team.png'
   ); 
   register_post_type('team',$args);
 }
@@ -283,7 +283,7 @@ function create_clients() {
     'hierarchical' => true,
     'supports' => array( 'title', 'thumbnail'),
     'rewrite' => array('slug' => 'klant'),
-    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek/images/clients.png'
+    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek-plugin/images/clients.png'
   ); 
   register_post_type('clients',$args);
 }
@@ -424,7 +424,7 @@ function create_participants() {
     'hierarchical' => false,
     'supports' => array( 'title', 'editor', 'thumbnail'),
     'rewrite' => array('slug' => 'deelnemer'),
-    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek/images/participants.png'
+    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek-plugin/images/participants.png'
   ); 
   register_post_type('participants',$args);
 }
@@ -470,7 +470,7 @@ function create_partners() {
     'hierarchical' => false,
     'supports' => array( 'title', 'editor', 'thumbnail'),
     'rewrite' => array('slug' => 'partner'),
-    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek/images/partners.png'
+    'menu_icon' => WP_PLUGIN_URL . '/decooperatiefabriek-plugin/images/partners.png'
   ); 
   register_post_type('partners',$args);
 }
@@ -508,7 +508,7 @@ function my_metabox_styles()
 {
     if ( is_admin() )
     {
-        wp_enqueue_style( 'wpalchemy-metabox', WP_PLUGIN_URL . '/decooperatiefabriek/css/meta.css' );
+        wp_enqueue_style( 'wpalchemy-metabox', WP_PLUGIN_URL . '/decooperatiefabriek-plugin/css/meta.css' );
         wp_enqueue_script( 'media-upload' );
     }
 }
@@ -598,7 +598,7 @@ function kia_metabox_init(){
 	wp_enqueue_script('jquery-ui-sortable');
 	
 	// special script for dealing with repeating textareas
-	wp_register_script('kia-metabox', WP_PLUGIN_URL . '/decooperatiefabriek/php/kia-metabox.js',array('jquery','editor'), '1.0');
+	wp_register_script('kia-metabox', WP_PLUGIN_URL . '/decooperatiefabriek-plugin/php/kia-metabox.js',array('jquery','editor'), '1.0');
 	
 	// needs to run AFTER all the tinyMCE init scripts have printed since we're going to steal their settings
 	add_action('after_wp_tiny_mce','kia_metabox_scripts',999);
@@ -671,7 +671,7 @@ function register_lead( $buttons ) {
 }
 
 function add_plugin( $plugin_array ) {
-   $plugin_array['lead'] = WP_PLUGIN_URL .'/decooperatiefabriek/js/leadbutton.js';
+   $plugin_array['lead'] = WP_PLUGIN_URL .'/decooperatiefabriek-plugin/js/leadbutton.js';
    return $plugin_array;
 }
 
