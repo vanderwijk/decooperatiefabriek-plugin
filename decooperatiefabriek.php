@@ -2,7 +2,7 @@
 /*
 Plugin Name: de Coöperatie Fabriek
 Description: Core functionality for de Coöperatie Fabriek.
-Version: 1.0
+Version: 1.0.1
 Author: Stijn de Jong
 Author URI: http://www.stijndejong.com
 */
