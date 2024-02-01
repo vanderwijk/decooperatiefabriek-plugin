@@ -39,9 +39,6 @@ function dcf_save_theme_settings() {
 	    else
 	        $tab = 'homepage'; 
 	    switch ( $tab ){ 
-	        case 'general' :
-				$settings['dcf_twitteraccount']	  = $_POST['dcf_twitteraccount'];
-			break; 
 			case 'homepage' :
 				$settings['dcf_slider_title']	  	  = $_POST['dcf_slider_title'];
 				$settings['dcf_slider_subtitle']	  = $_POST['dcf_slider_subtitle'];
@@ -66,7 +63,6 @@ function dcf_save_theme_settings() {
 				$settings['dcf_sidebar_button_link']	  	  = $_POST['dcf_sidebar_button_link'];
 			break;
 			case 'contact' :
-				$settings['dcf_contact_twitter']	  	  = $_POST['dcf_contact_twitter'];
 				$settings['dcf_contact_linkedin']	  	  = $_POST['dcf_contact_linkedin'];
 				$settings['dcf_contact_maps']	  		  = $_POST['dcf_contact_maps'];
 				$settings['dcf_contact_address']	  	  = $_POST['dcf_contact_address'];
@@ -114,17 +110,6 @@ function dcf_settings_page() {
 					
 					echo '<table class="form-table">';
 					switch ( $tab ){
-						case 'general' :
-							?>
-							<tr>
-								<th><label for="dcf_twitteraccount">Twitterfeed</label></th>
-								<td>
-									<input id="dcf_twitteraccount" name="dcf_twitteraccount" type="text" value="<?php esc_attr_e($settings['dcf_twitteraccount']); ?>" />
-									<p class="description">Vul hier de accounts van Twitter in. <br/><code>@accountnaam, @accountnaam</code></p>
-								</td>
-							</tr>
-							<?php
-						break; 
 						case 'footer' : 
 							?>
 							<tr>
@@ -202,8 +187,6 @@ function dcf_settings_page() {
 							<tr>
 								<th><label>Contactgegevens</label></th>
 								<td>
-									<input id="dcf_contact_twitter" name="dcf_contact_twitter" type="text" value="<?php esc_attr_e($settings['dcf_contact_twitter']); ?>" /> <br/>
-									<p class="description">Vul hier de accounts van Twitter in. <br/><code>@accountnaam, @accountnaam</code></p>
 									<input id="dcf_contact_linkedin" name="dcf_contact_linkedin" type="text" value="<?php echo esc_attr_e($settings["dcf_contact_linkedin"]); ?>" /> <br/>
 									<p class="description">Vul hier de pagina van LinkedIn in. <br/><code>http://www.linkedin.com/company/3218216?trk=NUS_CMPY_FOL-pdctd</p>
 									<!--<textarea id="dcf_contact_maps" name="dcf_contact_maps" cols="40" rows="3"><?php echo stripslashes($settings['dcf_contact_maps']); ?></textarea><br/>

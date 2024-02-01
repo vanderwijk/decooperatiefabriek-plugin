@@ -21,10 +21,5 @@
     	<p class="description">LinkedIn - <code>publieke URL (http://www.linkedin.com/pub/...)</code></p>
     	<input type="text" name="<?php $metabox->the_name('team_linkedin'); ?>" value="<?php $metabox->the_value('team_linkedin'); ?>"/>
     </p>
-    
-    <p>
-    	<p class="description">Twitter - <code>@gebruikersnaam</code></p>
-    	<input type="text" name="<?php $metabox->the_name('team_twitter'); ?>" value="<?php $metabox->the_value('team_twitter'); ?>"/>
-    </p>
 
 </div>
